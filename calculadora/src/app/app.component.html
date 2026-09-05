@@ -1,0 +1,29 @@
+<h1>Calculadora</h1>
+
+<div>
+  <label for="num1">Num1</label>
+  <input id="num1" type="number" [(ngModel)]="num1" />
+</div>
+
+<div>
+  <label for="op">Op.</label>
+  <select id="op" [(ngModel)]="operador">
+    <option *ngFor="let o of operadores" [value]="o.simbolo">{{ o.simbolo }}</option>
+  </select>
+</div>
+
+<div>
+  <label for="num2">Num2</label>
+  <input id="num2" type="number" [(ngModel)]="num2" />
+</div>
+
+<button (click)="operar()">Operar</button>
+
+<p *ngIf="error">{{ error }}</p>
+
+<p>Resultado = {{ resultado !== null ? resultado : '' }}</p>
+
+<h2>Historial</h2>
+<ul>
+  <li *ngFor="let op of historial">{{ op.texto }}</li>
+</ul>
