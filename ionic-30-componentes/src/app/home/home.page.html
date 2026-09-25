@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Lista de Componentes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="primary">
+      <ion-title size="large">Lista de Componentes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="ion-padding-top ion-padding-start">
+    <p>30 componentes de Ionic</p>
+  </div>
+
+  <ion-list lines="full">
+    @for (c of componentes; track c.slug; let i = $index) {
+      <ion-item button [routerLink]="'/' + c.slug" detail="true">
+        <ion-label>
+          {{ i + 1 }}. {{ c.nombre }}
+          <p>{{ c.tag }}</p>
+        </ion-label>
+      </ion-item>
+    }
+  </ion-list>
+</ion-content>

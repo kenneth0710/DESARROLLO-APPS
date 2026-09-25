@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Interruptor</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-toggle>Default Toggle</ion-toggle><br /><br />
+  <ion-toggle [checked]="true">Checked Toggle</ion-toggle><br /><br />
+  <ion-toggle [disabled]="true">Disabled Toggle</ion-toggle><br /><br />
+  <ion-toggle [checked]="true" [disabled]="true">Disabled Checked Toggle</ion-toggle>
+</ion-content>

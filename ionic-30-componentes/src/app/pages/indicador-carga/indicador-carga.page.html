@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Indicador de Carga</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-button id="open-loading">Show Loading</ion-button>
+  <ion-loading trigger="open-loading" message="Dismissing after 3 seconds..." duration="3000"></ion-loading>
+</ion-content>

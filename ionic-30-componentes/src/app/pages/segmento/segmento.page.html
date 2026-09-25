@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Segmento</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ion-segment value="default">
+    <ion-segment-button value="default">
+      <ion-label>Default</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="segment">
+      <ion-label>Segment</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-segment [disabled]="true" value="disabled">
+    <ion-segment-button value="disabled">
+      <ion-label>Disabled</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="segment">
+      <ion-label>Segment</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-content>
